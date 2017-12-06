@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <meta charset="utf-8">
+    <title>Bootstrap Introduction</title>
+
+    <!-- Bootstrap to nic innego jak framework zawierający w pliku CSS własne style zmieniające wygląd naszej stronie internetowej.
+    Praca oparta o framework pozwala na tworzenie strony internetowej w oparciu o gotowy styl.
+    Nie musimy tworzyć własnego pliku CSS i zastanawiać się nad formatowaniem.
+    Plik CSS w ramach frameworku Bootstrap ma przypisane formaty dla znaczników HTML oraz domyślnych klasy.
+    UWAGA! Formatowanie zawarte w plikach CSS nie możemy zmieniać !
+    Dzięki niezmienności formatów znaczników HTML oraz nazewnictwa klas mamy pewność, że z każdym użyciem znacznika bądź klasy przy różnych stronach internetowych będzie takie samo formatowanie.
+
+    Bootstrap formatuje poszczególne znaczniki, jak nagłówki, akapity, przyciski, formularze, tabele, cytaty itd.
+    Stylizuje je za pomocą gotowych znaczników. Często znaczniki te zawierają odpowiednie gotowe klasy które mają swoje odniesienie w pliku CSS.
+    Zawiera również bardzo pomocne klasy które dostosowują wyświetlanie naszej strony internetowej na urządzeniach mobilnych.
+    Gotowe znaczniki znajdziemy formatujące poszczególne elemnty strony znajdują się na stronie internetowej Bootstrapa:
+    https://getbootstrap.com/docs/4.0/getting-started/introduction/
+    Najważniejsze w stosowaniu Bootstrapa jest umiejętność korzystania z dokumentacji znajdującej się na powyższej stronie.
+    Znajdziemy tam informacje o sposobie stosowania znaczników stylizowancyh przez Bootstrap oraz jak używac klas itd.
+
+    W celu skorzystania z frameworku Bootstrap musimy odpowiednio go zainstalować. Proces ten jest niczym innym jak podpięcie do pliku HTML linku do pliku CSS.
+
+    Robimy to na dwa sposoby:
+
+    1. W sekcji HEAD umieszczamy link odwołujący się do pliku CSS zlokalizowanego na serwerze Boostrapa. Link ten znajduje się na stronie głównej Bootstrap. W większości przypadków takie odwłoanie się w zupełności wystarcza. -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+    <!-- 2. W sekcji HEAD umieszczamy link z odwołaniem względnym (tzn. względenm naszego pliku HTML który formatujemy) do pliku CSS "bootstrap.css" pobranego w ramach paczki Bootstrap. -->
+
+    <!-- <link rel="stylesheet" href="bootstrap.css"> -->
+
+    <!-- UWAGA! Stosowanie frameworku Bootstrap nie ogranicza nas do stylu narzuconego przez pliku CSS dostarczonego z Bootstrap.
+           Jeżeli nie podoba nam się styl wg. pliku CSS Bootstrapa i chcemy zmienić stylizację jakiegoś elementu wówczas musimy stworzyć własny plik CSS i podpiąć go w sekcji HEAD naszego pliku HTML.
+           Musimy jednak pamiętać, aby link do naszego pliku znajdował się w kolejnej linii za linkiem do pliku CSS Bootstrapa. MUSI BYĆ DRUGI!
+           Ponieważ hierarchia styli CSS jest taka, że jak w pliku CSS przypiętym na pierwszym miejscu jest nadany jakis styl to element przyjmuje taki wygląd.
+           Jednak, jeżeli jest drugi plik CSS i tam zdefiniowaliśmy kolor tekstu dla jakiegoś elementu to cały element będzie zdefiniowany według pierwszego pliku CSS, a kolor tekstu zostanie nadany według drugiego pliku.
+           Nawet pomimo jeżeli w pierwszym pliku był jakiś kolor tekstu. Po prostu będzie on nadpisany. -->
+
+  </head>
+
+  <body>
+
+    <!-- W celu sprawdzenia czy odpowiednio zaistalowaliśmy Bootstrapa wystarczy umieścić jakiś znacnzik z tekstem np. H1 i sprawdzić czy różni się on względem pliku HTML bez podpięcia linku do pliku CSS. -->
+
+    <!-- Praca z Bootstrapem polega na tym, że tworzymy znacznik dotyczący elementu jaki chcemy umieścić na naszej stronie internetowej.
+    Następnie w dokumentacji Bootstrapa na stronie WWW frameworka szukamy tego elementu i nadajemy mu taką klasę która nadaje nam odpowiedni wygląd elementu wg. dokumentacji Bootstrapa.
+    Nastepnie jeżeli chcemy dodatkowo zmienić ten element to dalej przeglądamy dokumentację Bootstrapa tego elementu i dopisujemy kolejną klasę, bądź dodajemy kolejny atrybut do tego znacznika.
+    Na przykład tworzymy przycisk:
+    1. tworzymy znacznik BUTTON bez żadnej klasy,
+    2. szukamy w dokumentacji, zamieszczonej na stronie WWW frameworku, informacji o przycisku,
+    3. znajdujemy odpowiedni dla nas przycisku i w naszym kodzie HTML wpisujemy odpowiednią klasę w znacnzik BUTTON
+    4. jeżeli chcemy nadać przyciskowi dodatkowych własności to szukamy ich w dokumentacji i dopisujemy klasę bądź atrybu.
+
+    Często praca też polega na kopiowaniu całego kodu z dokumentacji Bootstrapa.
+    Następnie odpowiednio go modyfikujemy według klas również z dokumentacji Bootstrapa bądź według własnej klasy umieszczonej w naszym pliku CSS.-->
+
+    <h1>Bootstrap!</h1>
+
+    <!-- Nalezy umieszczać całą zawartosć naszej strony internetowej pomiędzy elementami DIV z klasą CLASS="CONTAINER".
+    Jest to specjalna klasa która dodaje marginesy na naszej stronie i dodatkowo będziemy wykorzysytwali ją do odpowiedniego wyświetlania na urządzeniach mobilnych. -->
+
+    <div class="container">
+      <h1>Hello World!</h1>
+      <button class="btn btn-success btn-lg" type="button" name="button">Active</button>
+      <button class="btn btn-success btn-lg" disabled="disabled" type="button" name="button">Disabled</button>
+    </div>
+
+  </body>
+
+</html>

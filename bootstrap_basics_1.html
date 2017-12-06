@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Bootstrap Buttons</title>
+
+    <!-- Podpięcie dwóch plików CSS. Pierwszego Bootstrap oraz durgiego z moimi stylami.
+    Spowoduje to, że jeżeli chcę zmienić stylizowanie narzucone przez Bootstrap, to po prostu w swoim pliku dokonujemy zmiany stylu dla konkretnego elementu i tylko tej własności której chcemy.
+    Wówczas zmieniona będzie tylko ta jedna własność.
+    NIC NIE ZMIENIAMY W PLIKU CSS BOOTSTRAP -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href="my_style.css">
+  </head>
+  <body>
+
+    <!-- Praca z Bootstrapem polega na tym, że tworzymy znacznik dotyczący elementu jaki chcemy umieści na naszej stronie internetowej.
+    Następnie w dokumentacji Bootstrapa na stronie WWW frameworka szukamy tego elementu i nadajemy mu taką klasę która nadaje nam odpowiedni wygląd elementu wg. dokumentacji Bootstrapa.
+    Nastepnie jeżeli chcemy dodatkowo zmienić ten element to dalej przeglądamy dokumentację Bootstrapa tego elementu i dopisujemy kolejną klasę, bądź dodajemy kolejny atrybut do tego znacznika.
+    Na przykład tworzymy przycisk:
+    1. tworzymy znacznik BUTTON bez żadnej klasy,
+    2. szukamy w dokumentacji, zamieszczonej na stronie WWW frameworku, informacji o przycisku,
+    3. znajdujemy odpowiedni dla nas przycisku i w naszym kodzie HTML wpisujemy odpowiednią klasę w znacnzik BUTTON
+    4. jeżeli chcemy nadać przyciskowi dodatkowych własności to szukamy ich w dokumentacji i dopisujemy klasę bądź atrybu.-->
+
+    <!-- Klasa CONTAINER dla znacznika DIV powoduje dodanie marginesów na naszej stronie.
+    Następnie za pomoca dodatkowych klas będziemy mogli dostosowywać wyświetlanie naszej strony na urządzeniach mobilnych. -->
+
+    <div class="container">
+
+      <h1>Hello World!</h1>
+
+      <button class="btn btn-success btn-lg" type="button" name="button">Active</button>
+      <button class="btn btn-success btn-lg" disabled="disabled" type="button" name="button">Disabled</button>
+
+    </div>
+
+    <!-- Poniżej mamy kolejny przykład pracy z Bootstrap.
+    Znajdujemy interesujący element, w poniższym przykładzie "jumbotron" (coś w rodzaju strony powitalnej) i wklajamy kod HTML z dokumentacji Bootstrapa do naszego pliku.
+    A następnie jeżeli potrzebujemy modyfikujemy ten kod dopisując odpowiednie klasy znalezione w dokumentacji bądź dodajemy własną klasę stylizowaną w naszym pliku. -->
+
+    <div class="container">
+      <div class="jumbotron">
+        <h1>Hello, world!</h1>
+        <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+        <p>
+          <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+        </p>
+      </div>
+    </div>
+
+
+
+  </body>
+</html>
