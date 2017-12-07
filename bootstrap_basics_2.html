@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Bootstrap Basics 1</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+  </head>
+  <body>
+
+    <!-- Umieszczenie całej treści strony w DIV i klasie CONTAINER. Dzieki temu mamy odpowiednie marginesy. -->
+
+    <div class="container">
+
+      <!-- Kolejna lekcja pracy z Bootstrapem.
+      Umieściliśmy na naszej stronie internetowej formularz składający się z kilku standardowych pól. Min.Email, Password, Radiobutton itd.
+      Dokonaliśmy tego z wykorzystaniem dokumentacji umieszczonej na stronie internetowej frameworka.
+      W sekcji poświęconej formularzom wybraliśmy interesujące nas pola formularzy i skopiowaliśmy kod HTML do naszego pliku.
+      Jeżeli potrzebowaliśmy dodatkowych funkcjonalości bądź wyglądu dla użytych pól formularzu wówczas przeglądając dodatkowe klasy, atrybuty w dokumentacji dodalibyśmy je w odpowiednich miejscach.
+      Powyższa procedura dotyczy normalnej pracy z Bootstrapem.
+      Tzn. ciągła praca z dokumentacją i kopiowania, używania odpowiednich klas, atrybutów.
+
+      Analizując poniższy kod można zrozumieć sposób nadawania klas we frameworku.
+
+      Nazwy klasy zaczynają się od sformułowania odnoszącego się do znacznika w którym są używane.
+      Następnie po myslniku znajduje się słowo opisujące konkretnie to czego będziemy chcieli użyć.
+      W niektórych przypadkach może nie być sekcji po myślniku tylko będzie znajdować się kolejna klasa ze słówkiem z pierwszej klasy i dopiero z myślnikiem.
+      Odnieśnienia do znaczników mogą być w sposób bezpośredni lub pośredni.
+
+      Na przykład:
+      1. Elementy formularza umieszczamy między znacznikami FORM. Poszczególne pola formularza w Bootstrapie otoczone są DIVami aby dokonać pewnego odsunięcia pól od siebie.
+         DIVy te posiadają klasę FORM-GROUP. Już tutaj widać korelację klasy DIV z nazwą znacznika formularza FORM.
+         Kolejną zależność widzimy w stosowaniu poszczególnych pól formularza:
+         Pole INPUT typu: - EMAIL zawiera klasę FORM-CONTROL
+                          - PASSWORD zawiera klasę FORM-CONTROL
+                          - FILE zawiera klasę FORM-CONTROL-FILE
+                          - CHECKBOX/RADIO zawiera klasę FORM-CHECK-INPUT
+         Do tego dochodza indywidualne identyfikatory np.: INPUT typu EMAIL zawiera id="exampleInputEmail1".
+         Niektóre z powyższych znaczników znajdują się między DIVami o klasie FORM-CHECK. Do tego dochodzą jeszcze etykiety LABEL również o odpowiednich klasach bądź identyfikatorach, np.: FORM-CHECK-LABEL ,exampleFormControlSelect2.
+         Poza klasami bądź identyfikatoram dochodza również atrybuty, np.: disable - aby wyłączyć z możliwości wyboru przez użytkownika, ale pozostawić widoczny.
+         Multiple - pole SELECT z wielokrotnym wyborem.
+      2. Przycisku użyty w znacnziku BUTTON zawiera najpierw klasę BTN a następnie stosując odpwiednią klasę wybieramy stylizację tego przycisku, np.: BTN-SUCCESS. Te dwie klasy powodują stworzenie przycisku o odpowiednim wyglądzie.
+         Jeżeli przycisk został użyty w znacnziku A jako link to również ten znacznik posiada klasę BTN i np BTN-DANGER.
+         Do tego dochodzą również klasy określające wielko przycisku itd.
+      3. Akapit P stylizujemy używając odpowiedniej klasy, np.:TEXT-SM-LEFT.
+
+      A wiec podsumowując nazwy klas Bootstrapa są związane z elementem ktory chcemy użyć na naszej stronie.
+      Aby dodatkowo wystylizować nasz element dopisujemy kolejną klasę z myślnikiem i słowem związanym z efektem jaki powoduje.
+      To nas prowadzi do tego, że w Bootstrapie elementy stylizujemy dopisując w znaczniku kolejne klasy.
+      Jeżeli czegoś nie ma albo sami chcemy coś zmienić to tworzymy własny plik CSS i tam zmieniamy to co samic chcemy.  -->
+
+      <!-- Notatki:
+
+      Znacznik SMALL służy do napisania czegoś w rodzaju tekstu z gwiazdką. Np.: przy polu formularza EMAIL chcemy poinformowac użytkownika, że dane podawane nie będą gormadzone.
+      Wówczas wyświetli się drobny tekst.
+
+      Znacznik FIELDSET dodaje obramowanie gruopy elentów. Dlatego aby chcemy aby elementy były obramowane, wówczas musimy je wrzucić między ten znacnzik.
+
+      -->
+
+      <!-- Formularz wg. Bootstrap -->
+
+      <form>
+
+        <!-- Pole formularza typu EMAIL -->
+
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+
+        <!-- Pole formularza typu PASSWORD -->
+
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        </div>
+
+        <!-- Pole formularza typu FILE - służy do przesyłania plików do strony internetowej/serwisu www -->
+
+        <div class="form-group">
+          <label for="exampleFormControlFile1">Example file input</label>
+          <input type="file" class="form-control-file" id="exampleFormControlFile1">
+        </div>
+
+        <!-- Pole formularza typu SELECT do tworzenia listy rozwijanej do wyboru pojedynczego -->
+
+        <div class="form-group">
+          <label for="exampleFormControlSelect2">Example multiple select</label>
+          <select class="form-control" id="exampleFormControlSelect2">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+        </div>
+
+        <!-- Pole formularza typu SELECT do tworzenia listy rozwijanej do wyboru wielokrotnego -->
+
+        <div class="form-group">
+          <label for="exampleFormControlSelect2">Example multiple select</label>
+          <select multiple class="form-control" id="exampleFormControlSelect2">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+        </div>
+
+        <!-- Pole formularza typu RADIO -->
+
+        <div class="form-check">
+          <label class="form-check-label">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+            Option one is this and that&mdash;be sure to include why it's great
+          </label>
+        </div>
+        <div class="form-check">
+          <label class="form-check-label">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+            Option two can be something else and selecting it will deselect option one
+          </label>
+        </div>
+        <div class="form-check disabled">
+          <label class="form-check-label">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" disabled>
+            Option three is disabled
+          </label>
+        </div>
+
+        <!-- Znacznik TEXTAREA (UWAGA! nie jest to pole INPUT typu TEXATEA) -->
+
+        <div class="form-group">
+          <label for="exampleFormControlTextarea1">Example textarea</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+
+        <!-- Pole formularza typu CHECKBOX -->
+
+        <div class="form-check">
+          <label class="form-check-label">
+            <input type="checkbox" class="form-check-input">
+            Check me out
+          </label>
+        </div>
+
+        <!-- Przycisk formularza typu SUBMIT -->
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+
+      </form>
+
+    </div>
+
+  </body>
+</html>

@@ -56,7 +56,34 @@
     4. jeżeli chcemy nadać przyciskowi dodatkowych własności to szukamy ich w dokumentacji i dopisujemy klasę bądź atrybu.
 
     Często praca też polega na kopiowaniu całego kodu z dokumentacji Bootstrapa.
-    Następnie odpowiednio go modyfikujemy według klas również z dokumentacji Bootstrapa bądź według własnej klasy umieszczonej w naszym pliku CSS.-->
+    Następnie odpowiednio go modyfikujemy według klas również z dokumentacji Bootstrapa bądź według własnej klasy umieszczonej w naszym pliku CSS.
+
+    Nazwy klasy w Bootstrapie zaczynają się od sformułowania odnoszącego się do znacznika w którym są używane.
+    Następnie po myslniku znajduje się słowo opisujące konkretnie to czego będziemy chcieli użyć, bądź wiąże się z tym jaką stylizacj.
+    W niektórych przypadkach może nie być sekcji po myślniku tylko będzie znajdować się kolejna klasa ze słówkiem z pierwszej klasy i dopiero z myślnikiem.
+    Odnieśnienia do znaczników mogą być w sposób bezpośredni lub pośredni.
+
+    Na przykład:
+    1. Elementy formularza umieszczamy między znacznikami FORM. Poszczególne pola formularza w Bootstrapie otoczone są DIVami aby dokonać pewnego odsunięcia pól od siebie.
+       DIVy te posiadają klasę FORM-GROUP. Już tutaj widać korelację klasy DIV z nazwą znacznika formularza FORM.
+       Kolejną zależność widzimy w stosowaniu poszczególnych pól formularza:
+       Pole INPUT typu: - EMAIL zawiera klasę FORM-CONTROL
+                        - PASSWORD zawiera klasę FORM-CONTROL
+                        - FILE zawiera klasę FORM-CONTROL-FILE
+                        - CHECKBOX/RADIO zawiera klasę FORM-CHECK-INPUT
+       Do tego dochodza indywidualne identyfikatory np.: INPUT typu EMAIL zawiera id="exampleInputEmail1".
+       Niektóre z powyższych znaczników znajdują się między DIVami o klasie FORM-CHECK. Do tego dochodzą jeszcze etykiety LABEL również o odpowiednich klasach bądź identyfikatorach, np.: FORM-CHECK-LABEL ,exampleFormControlSelect2.
+       Poza klasami bądź identyfikatoram dochodza również atrybuty, np.: disable - aby wyłączyć z możliwości wyboru przez użytkownika, ale pozostawić widoczny.
+       Multiple - pole SELECT z wielokrotnym wyborem.
+    2. Przycisku użyty w znacnziku BUTTON zawiera najpierw klasę BTN a następnie stosując odpwiednią klasę wybieramy stylizację tego przycisku, np.: BTN-SUCCESS. Te dwie klasy powodują stworzenie przycisku o odpowiednim wyglądzie.
+       Jeżeli przycisk został użyty w znacnziku A jako link to również ten znacznik posiada klasę BTN i np BTN-DANGER.
+       Do tego dochodzą również klasy określające wielko przycisku itd.
+    3. Akapit P stylizujemy używając odpowiedniej klasy, np.:TEXT-SM-LEFT.
+
+    A wiec podsumowując nazwy klas Bootstrapa są związane z elementem ktory chcemy użyć na naszej stronie.
+    Aby dodatkowo wystylizować nasz element dopisujemy kolejną klasę z myślnikiem i słowem związanym z efektem jaki powoduje.
+    To nas prowadzi do tego, że w Bootstrapie elementy stylizujemy dopisując w znaczniku kolejne klasy.
+    Jeżeli czegoś nie ma albo sami chcemy coś zmienić to tworzymy własny plik CSS i tam zmieniamy to co samic chcemy. -->
 
     <h1>Bootstrap!</h1>
 
