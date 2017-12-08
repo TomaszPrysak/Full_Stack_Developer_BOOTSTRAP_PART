@@ -1,3 +1,26 @@
+/*Framework Bootstrap udostępnia nam bardzo wiele możliwości stylizacji naszej strony.
+
+Jeżeli jednak chcielibyśmy nieco zmienić element utworzony przez framework wystarczy stworzyć własny plik CSS.
+Nastepnie umieścić w tym pliku nazwę klasy Bootsrtapa dotyczącą konkretnego elementu i już w naszym pliku dokonać odpowiedniej zmiany.
+Podpinając nasz plik CSS jako drugi w kolenjości w sekcji HEAD pliku HTML (kod jest czytany z góry na dół) wówczac to co zmienia Bootstrap zostanie nadpisane przez nasz styl.
+
+Na przykład:
+
+W pliku "bootstrap_basics_1.html" utworzyliśmy przycisk korzystając z Bootstrapa.
+Jednak nie podobał nam się kolor przycisku więc w podpiętym jako drugim naszym pliku CSS umieścilismy klasę odpowiadającą temu przyciskowi i nadpisalismy jego kolor.*/
+
 .btn-success{
   background-color: red;
 }
+
+/*W pliku "bootstrap_basics_3.html" utworzyliśmy menu nawigacyjne na górze strony  korzystając z Bootstrapa.
+Jednak nie podobał nam się kolor tła menu więc w podpiętym jako drugim naszym pliku CSS umieściliśmy klasę odpowiadającą menu i nadpisaliśmy kolor jego tła*/
+
+.navbar-default {
+  background-color: #d18282;
+  border-color: #803b3b;
+}
+
+/*Tak wygląda praca z Bootstrapem i jego modyfikacją. Wszystko co chcemy zmienić dokonujemy w naszym pliku CSS poprzez umieszczanie klas z Bootstrapa i modyfiakcja własności które chcemy.
+Warto się posiłkowac plikiem CSS Bootstrapa, aby znaleźć odpowiednią klasę i jąk przekopiowac do swojego pliku i następnie zmienić własność któą chcemy.
+NIC NIE ZMIENIAMY W PLIKU CSS BOOTSTRAPA !*/

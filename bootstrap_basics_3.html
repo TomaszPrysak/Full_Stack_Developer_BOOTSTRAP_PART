@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Bootstrap Basics 3</title>
+
+    <!-- UWAGA! Użyto wersji 3.3.7 Bootstrapa -->
+
+    <link rel="stylesheet" href="bootstrap3.css">
+
+    <!-- Podpięcie naszego pliku CSS -->
+
+    <link rel="stylesheet" href="my_style.css">
+  </head>
+  <body>
+
+    <!-- Menu na stronoe wg.Bootstrap -->
+
+    <!-- Tym razem pracujemy z Bootstrapem w wersji 3.3.7. Dlatego też, próbując użyć tego kodu na stronie internetowej z podpiętą wersją Bootstrapa 4 będzie źle wyświetlana zawartość
+
+    Kolejny przykład pracy z Bootstrapem tzn. przeglądanie dokumentacji i używanie interesujących nas elementów oraz ewentualnie dopasowywanie ich do siebie za pomocą własnego pliku CSS.
+
+    Po krótce opiszę znajdujący się tutaj kod. -->
+
+    <!-- Według najnowszej wersji HTML5 stworzono podział strony internetwoej na sekcje: <HEADER>, <NAV>, <SECTION>, <ASIDE>, <ARTICLE>, <FOOTER>
+    Każda z tych sekcji dotyczy różnych treśći umieszczanych na naszej stronie.
+
+    W sekcji NAV umieszczamy treści które budują menu naszej strony.
+    Znacznik NAV zawiera klasy odpowiednie dla frameworka Bootstrap. Ich nazwy są bardzo intuicyjne.
+    Klasa NAVBAR oraz NAVBAR-DEFAULT określają odpowiedni styl naszemu menu. Jeżeli chcielibyśmy aby menu wyglądało inczej musilibyśmy w dokumentacji znaleźć interesujący nas styl menu.
+    Badź stworzyć własny styl korygujący ten z Bootstrapa. -->
+
+    <nav class="navbar navbar-default">
+
+      <!-- Chcąc aby treści na naszej stronie internetowej miały odpowiednie marginesy a zatem przyjemnie wyglądały dla użytkowniak używamy DIV z klasą CONTAINER -->
+
+      <div class="container">
+
+        <!-- Ponieważ framework Bootstrap został stworzony do przeglądania stron na urządzeniach mobilnych umożliwia zwijanie menu do ikony "hamburger"
+        Zgodnie z dokumentacją poniższa sekcja to umożliwia.
+        Znaczniki SPAN oznaczają ikonki kreseczek w ikonie "hamburger". W tym kształcie będą 3 kreseczki. Jeżeli dodamy kolejny pusty znacnzik SPAN to powiększy się ikonka o jedną kreseczkę.
+        Z kolei znacznik A oznacza nazwę naszej strony internetowej/firmy. Możemy tutaj umieścić ikonkę naszej strony internetowej/firmy. -->
+
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Brand</a>
+        </div>
+
+        <!-- Powyższy kod dotyczy jedynie ikonki.
+        Aby nasze menu po zmniejszeniu przeglądarki bądź przeglądaniu na urzędzeniu mobilnym zostało zwinięte do ikony "hamburgera" to musimy umieścić treść w znaczniku DIV z klasą COLLAPSE i NAVBAR-COLLAPSE.
+        Nasze menu zostało zbudowane o listę nieuporządkowaną UL z odpowiednimi klasami. Dodatkowo została zagnieżdżona kolejna lista nieuporzadkowana pod postacią przycisku DROPDOWN która po kliknięciu jest rozwijana.
+        Nie jest trudne zrozumienie umieszczania odpowiednich znaczników. Oczywiście odpowiednie klasy są wytłumaczone w dokumentacji Bootstrapa na stronie internetowej. -->
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+            <li><a href="#">Link</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="http://www.google.com">Go to Google</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+    </nav>
+
+    <div class="container">
+
+      <div class="jumbotron">
+        <h1>Hello!</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+    </div>
+
+    <!-- BARDZO WAŻNE! Aby rozwijanie menu z ikony "hamburgera" oraz rozwinięcie dodatkowego menu z przycisku DROPDOWN musimy zamieścić odniesienie do skryptów obsługujących te zdarzenia.
+    Są to skrypty odwołujące się do jQuery oraz Bootstrap JavaScript. -->
+
+    <script src="http://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  </body>
+</html>
