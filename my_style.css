@@ -21,6 +21,20 @@ Jednak nie podobał nam się kolor tła menu więc w podpiętym jako drugim nasz
   border-color: #803b3b;
 }
 
+/*W pliku "bootstrap_grid_system" obrazujemy w jaki sposób działa system siatki Bootstrap. W tym celu nadaliśmy klasę odpowiednio formatującą kolumny kolazująe tę siatkę.*/
+
+.boxy{
+  background: #b3ddff;
+  border: 2px solid black;
+  text-align: center;
+}
+
+/*Podobnie jak z klasą powyżej, dodaliśmy klasę wyśrodkowującą pomocny tekst przy pliku z siatką*/
+
+.wysrodkowanie{
+  text-align: center;
+}
+
 /*Tak wygląda praca z Bootstrapem i jego modyfikacją. Wszystko co chcemy zmienić dokonujemy w naszym pliku CSS poprzez umieszczanie klas z Bootstrapa i modyfiakcja własności które chcemy.
 Warto się posiłkowac plikiem CSS Bootstrapa, aby znaleźć odpowiednią klasę i jąk przekopiowac do swojego pliku i następnie zmienić własność któą chcemy.
 NIC NIE ZMIENIAMY W PLIKU CSS BOOTSTRAPA !*/
