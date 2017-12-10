@@ -10,32 +10,81 @@
 
     <!-- Zasada działania Grid System w Bootstrapie -->
 
+    <!-- Grid system to największa i naważniejsza funkcjonalność występująca w Bootstrapie.
+    Służy on do poprawnego wyświetlania treści na stronie internetwoej na urządzeniach mobilinych.
+    A dokładniej mówiąc odpowiednie wyświetlanie treści na urządzeniach o różnych roździelczościach ekranu. Od Komputerów stacjonarnych po tablety i na telefonach kończąc.
+    System ten dotyczy stron internetwych na których treści umieszczone są nie tylko jedna pod drugą lecz również obok siebie. W momencie kiedy tworzymy bloga gdzie treść będą wyświetlane jedna pod drugą nie musimy używać Grid System.
+    Na przykład mamy dwa akapity tekstu umieszczone obok siebie w jednej lini wówczas za pomocą Grid System możemy tak nimi manipulować, aby były odpowiednio wywietlane na różnych urządzeniach.
+
+    Grid System opiera sie na zadadzie podzialu strony internetowej na 12 równych kolumn.
+    Mając na uwadze ten podział na 12 kolumn możemy nimi odpowiednio kombinować.
+    Projektując stronę internetową na początek zastanawiamy się ile treści obok siebie chcemy umieścić. Nie może być to więcej niż 12 (chyba, że dokonamy zagnieżdżenia Gridy System) co przypada na 12 kolumn, a jednocześnie musi być to liczba będąca dzielnikiem 12.
+    Ilość treści zaprojektowanej skutkuje tym ile przeznaczymy mu kolumn wg Grid System.
+    Na przykład chcemy obok siebie umieścić 3 akapity. Wówczas wg. schematu działania Grid System na 3 treści przeznaczamy po 4 kolumny. Ponieważ: 12 (podstawowych kolumn) / 3 (akapity) = 4 (kolumny na każdy akapit)
+
+    Odpowiedni dobór kolum do treści to nie wszystko.
+    Nasętpnie dokonujemy wyboruó przy jakich rozdzielczości ekranu, chcemy aby nasz podział na kolumny był aktywny. To znaczy, że jeżeli ekran na którym przeglądamy stronę ma odpowiednią rozdzielczość to wyśweitla się tyle kolumn ile założymy.
+    W momencie kiedy wielkość ekranu się zmniejszy wówczas treści nie będą już wyświetlane w koleumnach tylko jedna pod drugą.
+    Kolejną bardzo ważną funkcjonalnością Grid System jest możliwosć przypisania kilku klas oznaczająych rozdzielczość do jednej treści. Dzięki temu możemy okreslić aby przy dużych ekranach były 4 kolumny, a jeżeli ekran będzie mniejszy to wtedy 2 kolumny i pod spodem kolejne dwie.
+    Do tego celu służą odpowiednio nadane klasy w Bootsrtapie. Dokonują one dopasowania treści do ekranu o odpowiedniej rozdzielczości.
+    O tym jakie klasy odpowiadają danym rozdzielczościom przeczytamy w dokumentacji Bootstrapa.
+
+    W celu skorzystania z Grid System umieszczamy całą naszą treść między znacnzikiem DIV z klasą ROW.
+    A następnie, w znależności ile kolumn przewidzieliśmy dla naszej treśći wówczas tworzymy tyle DIV z klasami odpowieadającym wielkości ekranu.
+    Przeanalizujmy poniższy kod w celu zrozumienia.-->
+
     <div class="container">
+
+      <!-- Przykład 1.
+      1. Tworzymy DIV ROW aby zastosować Grid System,
+      2. Zaprojektowaliśmy 3 akapity obok siebie dla naszej treści.
+      3. Dla każdego akapitu przeznaczymy po 4 kolumny zgodnie z regułą Grid System: 12 / 3 = 4
+      4. Aby umieścić nasze 3 akapity obok siebie tworzymy trzy DIVy z klasami COL-LG-4. "LG" oznacza, że będziemy stosować Grid System jeżeli ekran będzie co najmniej LARGE. Natomiast "4" oznacza, że przeznaczamy 4 kolumny dla każdego akapitu.
+      5. Jeżeli nasze okno będzie mniejsze wówczas akapity będą wyświetlane jeden pod drugim. -->
+
       <p class="wysrodkowanie">Large 4 x 3</p>
       <div class="row justify-content-between">
         <div class="col-lg-4 boxy">COL Large 4</div>
         <div class="col-lg-4 boxy">COL Large 4</div>
         <div class="col-lg-4 boxy">COL Large 4</div>
       </div>
-    </div>
 
-    <div class="container">
+      <!-- Przykład 2.
+      1. Tworzymy DIV ROW aby zastosować Grid System,
+      2. Zaprojektowaliśmy 2 akapity obok siebie dla naszej treści.
+      3. Dla każdego akapitu przeznaczymy po 6 kolumny zgodnie z regułą Grid System: 12 / 2 = 6
+      4. Aby umieścić nasze 2 akapity obok siebie tworzymy dwa DIVy z klasami COL-MD-6. "MD" oznacza, że będziemy stosować Grid System jeżeli ekran będzie co najmniej MEDIUM. Natomiast "6" oznacza, że przeznaczamy 6 kolumny dla każdego akapitu.
+      5. Jeżeli nasze okno będzie mniejsze wówczas akapity będą wyświetlane jeden pod drugim. -->
+
       <p class="wysrodkowanie">Medium 6 x 2</p>
       <div class="row">
         <div class="col-md-6 boxy">COL Medium 6</div>
         <div class="col-md-6 boxy">COL Medium 6</div>
       </div>
-    </div>
 
-    <div class="container">
+      <!-- Przykład 3.
+      1. Tworzymy DIV ROW aby zastosować Grid System,
+      2. Zaprojektowaliśmy 2 akapity obok siebie dla naszej treści.
+      3. Dla każdego akapitu przeznaczymy po 6 kolumny zgodnie z regułą Grid System: 12 / 2 = 6
+      4. Aby umieścić nasze 2 akapity obok siebie tworzymy dwa DIVy z klasami COL-6. Ta klasa nie posiada oznaczenia wielkości ekranu. Jednakże dotyczy ekranu EXTRA SMALL. Natomiast "6" oznacza, że przeznaczamy 6 kolumny dla każdego akapitu.
+      5. Przy używaniu klasy dla EXTRA SMALL nie ma znaczenie jak wielki będzie ekran. Akapity zawsze będą wyświetlane obok siebie. -->
+
       <p class="wysrodkowanie">Extra small 6 x 2</p>
       <div class="row">
         <div class="col-6 boxy">COL Extra Small 6</div>
         <div class="col-6 boxy">COL Extra Small 6</div>
       </div>
-    </div>
 
-    <div class="container">
+      <!-- Przykład 4 - BARDZO WAŻNY.
+      1. Tworzymy DIV ROW aby zastosować Grid System,
+      2. Zaprojektowaliśmy 4 akapity obok siebie dla naszej treści.
+      3. Dla każdego akapitu przeznaczymy po 3 kolumny zgodnie z regułą Grid System: 12 / 4 = 3
+      4. Aby umieścić nasze 4 akapity obok siebie tworzymy cztery DIVy z klasami COL-LG-3. "LG" oznacza, że będziemy stosować Grid System w wersji 3 kolumn dla każdego akapitu, jeżeli ekran będzie co najmniej LARGE. Natomiast "3" oznacza, że przeznaczamy 3 kolumny dla każdego akapitu.
+      5. Natomiast zastosowanie klasy COL-SM-6 oznacza, że jeżeli ekran zmniejszymy i nie będzie już LARGE, ale będzie co najmniej SMALL, o czym świadczy "SM" to dla każdego akapitu przypiszemy 6 klumn. O tym świadczy "6" w użytej drugiej klasie.,
+      Powyższe działa tak, że jak ekran jest duży to wyśweitlamy 4 akapity obok siebie którym przeznaczamy po 3 kolumny. Natomiast jak ekran się zmniejszy i będzie między LARGE a SMALL to każdemu akapitowi przypisujemy 6 kolum.
+      W związku z tym, że Grid System dzieli ekran na 12 kolum to w momencie jak ekran będzie co najmniej SMALL przeznaczymy na akapit 6 kolumn i wówczas treść będzie wyśietlana w ten sposób, że 2 kolumny obok siebie i 2 kolejne obok siebie pod tamtymi dwoma.
+      Wówczas nie ma znaczenia ile stworzyliśmy DIV ROW. -->
+
       <p class="wysrodkowanie">Kombinowane</p>
       <div class="row">
         <div class="col-lg-3 col-sm-6 boxy">ONE</div>
@@ -43,7 +92,7 @@
         <div class="col-lg-3 col-sm-6 boxy">THREE</div>
         <div class="col-lg-3 col-sm-6 boxy">FOUR</div>
       </div>
-    </div>
 
+    </div>
   </body>
 </html>

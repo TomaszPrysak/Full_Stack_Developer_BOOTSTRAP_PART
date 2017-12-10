@@ -26,7 +26,7 @@ Jednak nie podobał nam się kolor tła menu więc w podpiętym jako drugim nasz
 .boxy{
   background: #b3ddff;
   border: 2px solid black;
-  text-align: center;
+  /*text-align: center;*/
 }
 
 /*Podobnie jak z klasą powyżej, dodaliśmy klasę wyśrodkowującą pomocny tekst przy pliku z siatką*/
