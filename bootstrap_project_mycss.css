@@ -65,3 +65,7 @@
   border-color: #7d4c11;
   outline: none; /*powoduje, że nie ma obramowania w momencie kiedy aktywny jest przycisk*/
 }
+
+.form-control:focus {
+  border-color: #fff;
+}
