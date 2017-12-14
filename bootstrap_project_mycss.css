@@ -1,21 +1,28 @@
+/*Moje style nadpisujące te z Bootsrtapa*/
+
+/*Kolor i obramowanie Navbara*/
 .navbar-default {
   background-color: #7d4c11;
   border: 0px;
 }
 
+/*Kolor czcionki tekstu nazwy strony internetowej*/
 .navbar-default .container-fluid .navbar-header > a{
   color: #eaecf8;
 }
 
+/*Kolor czcionki w przyciskach Navbara jako linki*/
 .navbar-default .navbar-nav li a{
   color: #eaecf8;
 }
 
+/*Kolor czcionki i tła w przyciskach Navbara jako linki w momencie najechania na nie myszką*/
 .navbar-default .navbar-nav li a:hover{
   color: #7d4c11;
   background-color: #eaecf8;
 }
 
+/*Kolor czcionki i tła w przyciskach Navbara jako linki w momencie klikania w nie myszką*/
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
@@ -23,7 +30,38 @@
   background-color: #eaecf8;
 }
 
-.jumbotron p, .jumbotron h1, .jumbotron h3{
+/*Kolor czcionki w sekcji Treść w klasie JAMBOTRON*/
+.jumbotron p, .jumbotron h1, .jumbotron h3, .form-group label, .form-check label{
   color: #7d4c11;
   background-color: #eaecf8;
+}
+
+/*Formatowanie przycisku typu SUBMIT w formularzu logowania*/
+.btn-primary {
+  color: #eaecf8;
+  background-color: #7d4c11;
+  border-color: #7d4c11;
+}
+
+/*Formatowanie przycisku typu SUBMIT w formularzu logowania w momencie najechania na niego myszką*/
+.btn-primary:hover {
+  color: #7d4c11;
+  background-color: #eaecf8;
+  border-color: #7d4c11;
+}
+
+/*Formatowanie przycisku typu SUBMIT w formularzu logowania w momencie klikania w niego*/
+.btn-primary:active:hover,
+.btn-primary.active:hover,
+.open > .dropdown-toggle.btn-primary:hover,
+.btn-primary:active:focus,
+.btn-primary.active:focus,
+.open > .dropdown-toggle.btn-primary:focus,
+.btn-primary:active.focus,
+.btn-primary.active.focus,
+.open > .dropdown-toggle.btn-primary.focus {
+  color: #7d4c11;
+  background-color: #eaecf8;
+  border-color: #7d4c11;
+  outline: none; /*powoduje, że nie ma obramowania w momencie kiedy aktywny jest przycisk*/
 }

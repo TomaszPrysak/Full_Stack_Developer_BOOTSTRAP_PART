@@ -1,8 +1,12 @@
 <!DOCTYPE html>
+
+<!-- Strona logowania -->
+
 <html>
   <head>
     <meta charset="utf-8">
     <title>Coffe Lover</title>
+    <!-- Korzystanie z Bootstrap 3.3.7 oraz formatowanie go według swojego pomysłu -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="bootstrap_project_mycss.css">
   </head>
@@ -15,14 +19,18 @@
       <nav class="navbar navbar-default">
         <div class="container-fluid">
           <div class="navbar-header">
+            <!-- Tworzenie ikony menu rozwijanego w przydpadku ekranów mobilnych -->
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
               <span class="sr-only">Toggle navigation</span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
+            <!-- Tekst umieszczany w rogu jako nazwa strony internetowej -->
             <a class="navbar-brand" href="#">Coffe Lover !</a>
           </div>
+          <!-- Menu strony
+               Na stronie z fomularzem logowania "aktywny" jest "przycisk", że to właśnie strona logowania -->
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
               <li><a href="bootstrap_project_main.html">Home</a></li>
@@ -32,18 +40,42 @@
         </div>
       </nav>
 
-      <!-- Navbar End -->
+      <!-- Navbar Koniec -->
 
-      <!-- Content Start -->
+      <!-- Treść Start -->
 
+      <!-- Formularz logowania umieszczono w klasie JUMBOTRON -->
       <div class="jumbotron">
         <h1>Log In!</h1>
+        <p>Enter your email and password!</p>
+        <form class="" action="" method="post">
+          <!-- Pole fromularza typu EMAIL -->
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required placeholder="Enter email">
+          </div>
+          <!-- Pole fromularza typu PASSWORD -->
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" required placeholder="Password">
+          </div>
+          <!-- Pole formularza typu CHECKBOX -->
+          <div class="form-check">
+            <label class="form-check-label">
+              <input type="checkbox" class="form-check-input">
+              Keep Me Logged In
+            </label>
+          </div>
+          <!-- Przycisk typu SUBMIT -->
+          <button type="submit" class="btn btn-primary">Log In!</button>
+        </form>
       </div>
 
-      <!-- Content End -->
+      <!-- Treść Koniec -->
 
     </div>
 
+    <!-- Podpięcie jQuery i javascript -->
     <script src="http://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
